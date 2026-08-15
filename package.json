@@ -1,0 +1,65 @@
+{
+  "name": "mfl-mcp",
+  "version": "0.1.0",
+  "description": "MCP server for MyFantasyLeague team management, drafting, and research",
+  "license": "MIT",
+  "author": "Scott Diedrick",
+  "type": "module",
+  "main": "dist/index.js",
+  "bin": {
+    "mfl-mcp": "dist/index.js"
+  },
+  "files": [
+    "dist",
+    "README.md",
+    "LICENSE",
+    "docs"
+  ],
+  "scripts": {
+    "test": "vitest run",
+    "build": "tsc -p tsconfig.json",
+    "dev": "tsx src/index.ts",
+    "test:watch": "vitest",
+    "lint": "biome check .",
+    "format": "biome format --write .",
+    "typecheck": "tsc -p tsconfig.json --noEmit",
+    "record:fixtures": "tsx scripts/record-fixtures.ts",
+    "prepublishOnly": "npm run build && npm test"
+  },
+  "keywords": [
+    "mcp",
+    "model-context-protocol",
+    "myfantasyleague",
+    "mfl",
+    "fantasy-football",
+    "draft",
+    "claude",
+    "cursor"
+  ],
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/swalterd/mfl-mcp.git"
+  },
+  "bugs": {
+    "url": "https://github.com/swalterd/mfl-mcp/issues"
+  },
+  "homepage": "https://github.com/swalterd/mfl-mcp#readme",
+  "engines": {
+    "node": ">=22"
+  },
+  "packageManager": "npm@11.9.0",
+  "dependencies": {
+    "@modelcontextprotocol/sdk": "^1.30.0",
+    "fuzzyset.js": "^1.0.7",
+    "ofetch": "^1.5.1",
+    "zod": "^4.4.3"
+  },
+  "devDependencies": {
+    "@biomejs/biome": "^2.5.8",
+    "@types/node": "^26.2.0",
+    "msw": "^2.15.0",
+    "tsx": "^4.23.12",
+    "typescript": "^7.0.2",
+    "vitest": "^4.1.10"
+  }
+}

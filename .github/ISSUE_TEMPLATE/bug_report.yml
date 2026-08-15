@@ -1,0 +1,48 @@
+name: Bug report
+description: Report a bug in mfl-mcp
+title: "[bug] "
+labels: ["bug"]
+body:
+  - type: markdown
+    attributes:
+      value: |
+        Thanks for filing a bug. Do **not** include passwords, API keys, or auth cookies.
+  - type: dropdown
+    id: client
+    attributes:
+      label: MCP client
+      options:
+        - Cursor
+        - Claude Desktop
+        - Claude Code
+        - Other
+    validations:
+      required: true
+  - type: input
+    id: node
+    attributes:
+      label: Node.js version
+      placeholder: "v22.x"
+    validations:
+      required: true
+  - type: textarea
+    id: what-happened
+    attributes:
+      label: What happened?
+      description: Steps to reproduce and expected vs actual behavior.
+    validations:
+      required: true
+  - type: textarea
+    id: tools
+    attributes:
+      label: Tools involved
+      description: Tool names and sanitized parameters.
+    validations:
+      required: false
+  - type: textarea
+    id: logs
+    attributes:
+      label: Error output
+      description: Paste sanitized errors only.
+    validations:
+      required: false
