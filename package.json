@@ -18,7 +18,7 @@
   "scripts": {
     "test": "vitest run",
     "build": "tsc -p tsconfig.json",
-    "dev": "tsx src/index.ts",
+    "dev": "tsx --env-file=.env src/index.ts",
     "test:watch": "vitest",
     "lint": "biome check .",
     "format": "biome format --write .",
