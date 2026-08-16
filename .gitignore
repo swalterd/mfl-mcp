@@ -12,3 +12,4 @@ coverage/
 .cursor/
 .npmrc
 *.tsbuildinfo
+.tool-versions
